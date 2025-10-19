@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Habit Dots</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="topbar">
+        <h1>Habit Dots</h1>
+        <nav class="top-actions">
+            <button id="prevMonth" title="Previous month">‹</button>
+            <button id="thisMonth" title="Jump to current month">This Month</button>
+            <button id="nextMonth" title="Next month">›</button>
+            <span id="monthLabel" class="month-label"></span>
+            <label class="toggle">
+                <input type="checkbox" id="todayFilter" />
+                <span>Show only today’s pending</span>
+            </label>
+            <button id="exportBtn">Export</button>
+            <label class="import-label">
+                <input type="file" id="importInput" accept="application/json" hidden />
+                <span class="btn">Import</span>
+            </label>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="add-habit">
+            <form id="addForm" autocomplete="off">
+                <input id="habitName" placeholder="New habit e.g. Meditation" maxlength="40" required />
+                <input id="habitEmoji" placeholder="Emoji (optional) e.g. 🧘" maxlength="2" />
+                <input id="habitColor" type="color" value="#5eead4" title="Color" />
+                <button>Add</button>
+            </form>
+        </section>
+
+        <section id="habitsWrap" class="habits"></section>
+
+        <section class="empty" id="emptyState" hidden>
+            <p>No habits yet. Create your first habit above.</p>
+        </section>
+    </main>
+
+    <footer class="foot">
+        <button id="clearAll" class="danger">Clear All Data</button>
+    </footer>
+
+    <!-- libs first -->
+    <script defer src="lib/dates.js"></script>
+    <script defer src="lib/storage.js"></script>
+    <script defer src="lib/streaks.js"></script>
+    <!-- app last -->
+    <script defer src="app.js"></script>
+</body>
+
+</html>

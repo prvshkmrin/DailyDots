@@ -1,0 +1,11 @@
+{
+  "habits": [
+    { "id": "h1", "name": "Meditation", "emoji": "🧘", "color": "#5eead4", "createdAt": "2025-01-01" },
+    { "id": "h2", "name": "Walk 5k steps", "emoji": "🚶", "color": "#60a5fa", "createdAt": "2025-01-01" }
+  ],
+  "records": {
+    "h1": ["2025-01-02", "2025-01-03", "2025-01-04"],
+    "h2": ["2025-01-01", "2025-01-03"]
+  },
+  "settings": { "firstDayMonday": false, "showTodayOnly": false }
+}

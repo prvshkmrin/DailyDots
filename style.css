@@ -1,0 +1,220 @@
+:root {
+    --bg: #0e111a;
+    --card: #151929;
+    --muted: #9aa3af;
+    --text: #e5e7eb;
+    --accent: #60a5fa;
+    --accent2: #5eead4;
+    --danger: #ef4444;
+    --grid: #1f2436;
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    color: var(--text);
+    background: linear-gradient(135deg, #0b0e17, #161a2c) fixed;
+}
+
+button,
+input,
+select {
+    font: inherit
+}
+
+.topbar {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0b0f1c;
+    border-bottom: 1px solid #20253a;
+}
+
+.topbar h1 {
+    margin: 0;
+    font-size: 20px;
+    letter-spacing: .3px
+}
+
+.top-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center
+}
+
+.top-actions .month-label {
+    color: var(--muted);
+    padding: 0 8px
+}
+
+button,
+.btn {
+    background: var(--card);
+    color: var(--text);
+    border: 1px solid #262b42;
+    padding: 8px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover,
+.btn:hover {
+    filter: brightness(1.1)
+}
+
+button.danger {
+    background: #2a1111;
+    border-color: #3d1b1b;
+    color: #ffdcdc
+}
+
+.import-label .btn {
+    display: inline-block
+}
+
+.toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--muted)
+}
+
+.container {
+    max-width: 980px;
+    margin: 18px auto;
+    padding: 0 16px
+}
+
+.add-habit {
+    background: var(--card);
+    border: 1px solid #262b42;
+    border-radius: 14px;
+    padding: 12px;
+}
+
+.add-habit form {
+    display: grid;
+    grid-template-columns: 1fr 90px 56px 110px;
+    gap: 8px
+}
+
+.add-habit input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #262b42;
+    background: #0f1324;
+    color: var(--text)
+}
+
+.add-habit button {
+    background: var(--accent2);
+    color: #03201a;
+    font-weight: 700
+}
+
+.habits {
+    display: grid;
+    gap: 14px;
+    margin-top: 16px
+}
+
+.habit-card {
+    background: var(--card);
+    border: 1px solid #262b42;
+    border-radius: 16px;
+    padding: 12px;
+}
+
+.habit-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px
+}
+
+.habit-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700
+}
+
+.habit-badges {
+    display: flex;
+    gap: 8px;
+    color: var(--muted);
+    font-size: 12px
+}
+
+.habit-actions {
+    display: flex;
+    gap: 8px
+}
+
+.grid {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 6px;
+}
+
+.cell {
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: var(--grid);
+    color: #aab1c6;
+    user-select: none;
+    cursor: pointer;
+    border: 1px solid #262b42;
+    font-size: 13px;
+}
+
+.cell.dim {
+    opacity: .35
+}
+
+.cell.done {
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    color: #0b1120;
+    font-weight: 800
+}
+
+.cell.today {
+    outline: 2px solid var(--accent);
+    box-shadow: 0 0 0 2px #000 inset
+}
+
+.weekday {
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    font-size: 11px;
+    color: var(--muted);
+    text-align: center;
+}
+
+.empty {
+    color: var(--muted);
+    text-align: center;
+    padding: 26px 0
+}
+
+.foot {
+    max-width: 980px;
+    margin: 22px auto;
+    padding: 0 16px;
+    display: flex;
+    justify-content: flex-end
+}
